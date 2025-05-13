@@ -159,12 +159,10 @@ transform: rotate(0deg) }
 
 .Dual .DualInner{width: 100%; height: 100vh; object-fit: cover; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
 .Dual video{width: 100vw; height: 100%; object-fit: cover; display: block;} 
-.Dual video , .Dual img{width: 100%; height: 100%; display: block;}
-.Dual img{object-fit: contain;    transition: "opacity 1s ease-in-out"; display: none;}
+.Dual video , .Dual img{width: 100%; height: 100vh; display: block;}
+.Dual img{object-fit: contain;    height: 100vh; transition: "opacity 1s ease-in-out"; display: none;}
 
 .Dual .VideoBox,.Dual .ImageBox{width: 50%; position: relative; height: 100vh; object-fit: fill; vertical-align: center; display: flex; align-items: center;}
-
-
 .TitleMo{position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; color: #eee;}
 
 .Second{width: 100%;}

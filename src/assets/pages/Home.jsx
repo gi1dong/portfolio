@@ -74,9 +74,9 @@ const Home=()=> {
         {
           title: '감정 일기장',
           buttonText: '필기',
-          buttonLink: 'https://emotional-diary-kbm.vercel.app/',
+          buttonLink: 'https://o1df567576shd324df.notion.site/10a8d50ce1688091860dda556b0ffbc8',
           descriptionText:'작업물',
-          descriptionLink: 'https://o1df567576shd324df.notion.site/10a8d50ce1688091860dda556b0ffbc8',
+          descriptionLink: 'https://emotional-diary-kbm.vercel.app/',
         },
       ],
     },
