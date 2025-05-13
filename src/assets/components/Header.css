@@ -140,7 +140,7 @@ aside.Open {
   transform: translateX(0);
   transition: transform 0.3s ease;
 }
-
+nav{margin: 3rem auto 0;}
  /* 메뉴 항목 스타일 */
  nav ul {
   list-style: none;
