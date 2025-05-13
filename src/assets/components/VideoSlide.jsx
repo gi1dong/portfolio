@@ -36,7 +36,7 @@ const VideoSlide = ({svgContent, videoSrc, title, description, buttonText, butto
       <div className="MainTxt">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a className='BtnTxt01' href={buttonLink}>{buttonText}</a>
+        <a className='BtnTxt01' target="_blank"  href={buttonLink}>{buttonText}</a>
       </div>
     </div>
   );
