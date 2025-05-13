@@ -13,8 +13,8 @@ import disney from "../images/thumbnail.jpg";
 import Wooalong from "../images/wooalong.png";
 import gentlemonster from "../images/gentlemonster.jpg";
 import Tamburins from "../images/Tamburins.jpg";
-// import fila1 from '../images/fila_logo01.png';
-// import fila2 from '../images/fila_logo02.png';
+import fila1 from '../images/fila_logo01.png';
+import fila2 from '../images/fila_logo02.png';
 
 
 // 비디오 임포트
@@ -26,6 +26,9 @@ import DualSlide from '../components/DualSlide';
 import ListSlide from '../components/ListSlide';
 
 // import { EffectCoverflow, Pagination } from "swiper";
+const filaImg=["fila01.png",
+"fila02.png","fila03.jpg"
+]
 
 const Home=()=> {
   // ref
@@ -92,7 +95,7 @@ const Home=()=> {
       items: [
         {
           type: 'image', // 이미지 항목
-          imageSrc: ["/src/assets/images/fila_logo02.png", "/src/assets/images/fila_logo01.png"], // 두 개의 이미지
+          imageSrc: {["../images/fila_logo01.png", "../images/fila_logo02.png"]}, // 두 개의 이미지
           title: 'Fila',
           buttonText: '[AWD]Mo-specific design',
           buttonLink: 'https://gi1dong.github.io/fila/index.html',
