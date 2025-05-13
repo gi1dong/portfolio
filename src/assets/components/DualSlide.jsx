@@ -8,14 +8,6 @@ const DualSlide = ({items}) => {
   const [opacity, setOpacity] = useState(1); // opacity 
   // 상태 추가
 
-  // 이미지 배열
-  // let imagesHalf = [
-  //   "/src/assets/fila_logo01.png",
-  //   "/src/assets/fila_logo02.png"
-  // ];
-
-   // 이미지 배열
-   const imagesHalf = items[0].imageSrc; // items에서 이미지 배열 가져오기
    useEffect(() => {
     const interval = setInterval(() => {
       // opacity를 먼저 0으로 만들고, 이미지 전환 후 다시 1로 설정
@@ -34,14 +26,14 @@ const DualSlide = ({items}) => {
         <div className="DualInner">
         <div className="ImageBox">
           <img
-            src={imagesHalf[currentImageIndex]} // 현재 이미지 표시
+            src={items[0].imageSrc} // ✅ 여기 수정
             alt={`dynamic-image-${currentImageIndex}`}
             style={{
-              opacity: opacity, // opacity 설정
-              transition: "opacity 1s ease-in-out", // 부드러운 전환을 위한 transition 설정
-              display: "block", // 이미지가 보이도록 설정
-              width: "100%", // 이미지 크기 조정
-              height: "auto", // 이미지 비율 유지
+              opacity:opacity,
+              transition: "opacity 1s ease-in-out",
+              display: "block",
+              width: "100%",
+              height: "100%",
             }}
           />
                  {/* 이미지에 맞는 텍스트 */}

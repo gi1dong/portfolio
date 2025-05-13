@@ -164,7 +164,7 @@ transform: rotate(0deg) }
 
 .Dual .VideoBox,.Dual .ImageBox{width: 50%; position: relative; height: 100vh; object-fit: fill; vertical-align: center; display: flex; align-items: center;}
 .TitleMo{position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; color: #eee;}
-
+.Dual .ImageBox img{display: block; width: 100%; height: 100%; object-fit: fill;}
 .Second{width: 100%;}
     
 /* arrow */
@@ -253,14 +253,13 @@ margin: 0 auto; bottom: 5rem; right: 2rem;
 .HeartDrawingEffect{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 
 @media (max-width: 768px) {
-
   .PageReact .BtnWrap{display: block;}
   .PageReact ul li{width: 100%; display: block;}
   .PageReact ul li a{margin: 1rem auto 1rem;}
   .PageReact ul li a:nth-child(1){margin: 1rem;}
-  .Dual{flex-direction: column;}
-  .Dual .DualInner{display: block;}
-  .Dual .DualInner>div{width: 100%; height: 50vh;}
+  .Dual .DualInner{flex-direction: column;}
+.Dual .VideoBox,.Dual .ImageBox{width: 100%; height: 50vh; overflow: hidden;}
+
 }
 
 /* 스타일 (CSS) */
@@ -290,4 +289,5 @@ margin: 0 auto; bottom: 5rem; right: 2rem;
   100% {
     stroke-dashoffset: 0;   /* 경로의 끝까지 그려지며 끝 */
   }
+  
 }

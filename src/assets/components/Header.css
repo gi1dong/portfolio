@@ -64,7 +64,7 @@ aside.Closed{overflow: hidden; width: 0; height: 0; position: fixed; z-index: 11
   opacity: 0;
   transition:opacity 0.5s ease-in-out;
 } 
-.Inner{overflow-x: hidden; overflow-y: auto; padding-top: 26vw; width: calc(100% - 6rem); margin: 0 auto;}
+.Inner{overflow-x: hidden; overflow-y: auto; padding-top: 10vw; width: calc(100% - 6rem); margin: 0 auto;}
 .SearchBox{    position: relative;
   width: 100%; height: 5rem;
 }
