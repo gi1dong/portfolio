@@ -1,0 +1,295 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body {
+  background: rgba(0, 0, 0, 0.1);
+  font-family: 'Apple SD Gothic Neo';
+  font-size: 14px;
+  color: #1c1d1d;
+  margin: 0;
+  padding: 0;
+}
+
+.Swiper,.swiper,.swiper-slide ,.Swiper-slide {
+  text-align: center;  margin: 0 auto;
+  overflow: hidden;
+  font-size: 18px;
+  width: 100%;
+  height: 100vh!important;
+  opacity: 1;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Swiper-slide img,.Swiper-slide video{display: block; width: 100%!important; height: 100%!important; overflow: hidden;}
+.Main{position: relative; width: 100%; height: 100vh;}
+.Swiper-slide>div::before,.MainBox::before, .Dual::before,.VideoSlide:before{content: ""; background: rgb(0 0 0 / 50%); display: block; position: fixed;  width: 100%; height: 100%;  background-position: center; z-index: 1;}
+
+.swiper-slide.swiper-slide-active.Swiper-slide{opacity: 1;}
+
+.Aesop{opacity: 1; width: 100%; height: 100%; object-fit: cover; background: url(/src/assets/aesop.mp4)no-repeat center /cover; position: absolute; top: 0; right: 0; z-index: 9;}
+.Swiper-slide img ,video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a{text-decoration: none;}
+.SwiperBox{width: 100%; height: 100vh; margin:0 auto ;}
+
+/* .MainBox{position: relative;} */
+ .MainBox{width: 100vw; height: 100vh; position: relative; overflow: hidden; margin: 0 auto;} 
+ .VideoSlide{width: 100vw; height: 100vh; position: absolute; overflow: hidden; margin: 0 auto;} 
+
+.MainTxt{position: absolute;  top: 50%; left: 50%; transform: translate(-50%,-50%); color: #eee; line-height: 1.5;  z-index: 2; width: calc(100% - 6rem); }
+.MainBox video:not(.VideoSlide){position: absolute; top: 0; left: 0;width: 100%; height: 100%; object-fit: cover; z-index: 0;} 
+
+.MainTxt p{font-size: 1.8rem; margin: 3rem auto 3rem;}
+.swiper-pagination-bullet{background: rgba(0, 0, 0, 0.5);}
+.swiper-pagination-bullet-active{background: #eee;}
+
+.swiper-wrapper, .Swiper,.swiper-backface-hidden .swiper-slide, .swiper-slide,.swiper-slide>div{width: 100%; height: 100vh!important;}
+
+.PageReact .Btn.left,.PageReact .Btn,.Btn01{
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #000;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: -.036em;
+  transition: .3s backgroundcolor, .3s color, .3s border, .3s opacity;
+  -webkit-animation: move 2.5s infinite;
+  animation: move 2.5s infinite;
+  font-size: 1.5rem;background: #eee;
+  transition: all .3s;color: #000; 
+}
+/* border style */ 
+ .BtnWork,.BtnHandwriting ,.BtnTxt01{flex-shrink: 1; text-decoration: none;  border-radius: 50px; color: #000; display: inline-block; padding: 1rem 3rem; letter-spacing: -.036em; background: #eee;  transition: .3s background ,.3s color, .3s border, .3s opacity; -webkit-animation: move 2.5s infinite; animation: move 2.5s infinite;  transition: all .3s; font-size: 1.6rem;}
+
+@keyframes move {
+  0% {
+transform: rotate(0deg) }
+20% {
+transform: rotate(2deg) }
+24% {
+transform: rotate(-2deg) }
+28% {
+transform: rotate(2deg) }
+32% {
+transform: rotate(-2deg) }
+36% {
+transform: rotate(0deg) }
+}
+
+@-webkit-keyframes move {
+  0% {
+transform: rotate(0deg) }
+20% {
+transform: rotate(2deg) }
+24% {
+transform: rotate(-2deg) }
+28% {
+transform: rotate(2deg) }
+32% {
+transform: rotate(-2deg) }
+36% {
+transform: rotate(0deg) }
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+
+.PageReact{background: rgba(0, 0, 0, 0.1);}
+.PageReact ul{width: calc(100% - 6rem);  margin: 0 auto;  display: flex;align-items: center; flex-wrap: wrap; justify-content: center; height: 100%; text-align: center; gap: 3rem;}  
+.PageReact::after{content: ""; display: block;  position: absolute; }
+.PageReact .MainTxt h3{ color: #333; }
+.PageReact .BtnWrap a{box-shadow: 0 2px #fff;}
+.LogoReact{   display: inline-block;  margin: 0 auto 3rem; }
+.LogoReact img{width: 100%;max-width: 86px; height: 86px;object-fit: contain;} 
+
+.BtnBox{display: flex; justify-content: center; margin: 0 auto; 
+  -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -moz-transition: all 0.4s ease-in-out 0.4s;
+  -o-transition: all 0.4s ease-in-out 0.4s;
+  -ms-transition: all 0.4s ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;
+}
+
+.BtnBoxReact{display: flex; gap: 3rem; text-align: center; margin: 3rem auto 3rem; width: 50%; display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: center;flex-direction: row; }
+  .BtnHandwriting{margin: 0 auto 3rem;}
+  .PageReact ul li{display: grid; column-gap: 3rem;justify-content: space-between; align-items: space-between; text-align: center;    place-self :center; /* 그리드 열(column)의 개수와 너비를 설정 */ }
+  .PageReact ul li a{display: inline-block; line-height: 1;}
+.MainTxt h3{margin: 30px auto 10px; font-weight: 800; font-size: 24px;}
+
+.PageReact{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 2; display: flex; justify-content: space-between; width: 100%; flex-direction: column; align-items: center;
+}
+
+.PageReact .Title{margin: 1rem auto 3rem; font-weight: 600; font-size: 1.8rem; color: #eee;width: 100%; display: block;}
+.PageReact .BtnWrap{display: flex; gap: 3rem; flex-wrap: wrap; flex-direction: column;}
+
+/* 배경 */
+.Bg,.Notfound,.Video{width: 100%; height: 100vh; position: relative; overflow:hidden;object-fit: cover; }
+
+.Bg img{width: 100%; height: 100%; object-fit: cover; }
+
+.Notfound{display: flex; justify-content: center; align-items: center; margin: 0 auto; flex-direction: column; width: 100%; height: 100vh; line-height: 2;}
+.Notfound h2{font-size: 3rem; text-align: center;  display: inline-block; font-weight: 600;}
+.HomeAct{background: #eeee;padding: 1rem 3rem; margin: 3rem auto 0; border-radius: 5px; text-align: center;  display: flex; font-size: 2.4rem;}
+
+/* fila, aseop */
+.Dual{  display: flex;width: 100%; height: 100vh; object-fit: cover; position: relative; flex-direction: row;}
+.Dual .swiper-slide.swiper-slide-active.Swiper-slide>div{width: 100vw; height: 100vh; display: flex; justify-content: space-between; flex-direction: row; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+.Dual .DualInner{width: 100%; height: 100vh; object-fit: cover; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
+.Dual video{width: 100vw; height: 100%; object-fit: cover; display: block;} 
+.Dual video , .Dual img{width: 100%; height: 100%; display: block;}
+.Dual img{object-fit: contain;    transition: "opacity 1s ease-in-out"; display: none;}
+
+.Dual .VideoBox,.Dual .ImageBox{width: 50%; position: relative; height: 100vh; object-fit: fill; vertical-align: center; display: flex; align-items: center;}
+
+
+.TitleMo{position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; color: #eee;}
+
+.Second{width: 100%;}
+    
+/* arrow */
+.Arrow.swiper-button-next {
+margin: 0 auto; bottom: 5rem; right: 2rem;
+  display: block; position: fixed;   color: #fff;
+  /* background: rgba(0, 0, 0, 0.5); */
+  z-index: 10;
+  font-size: 0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Arrow span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.Arrow span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -10px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform:scaleX(-1) rotate(45deg);
+  transform:scaleX(-1) rotate(45deg);
+  box-sizing: border-box;
+}
+.Arrow span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb 3s infinite;
+  animation: sdb 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.HeartDrawingEffect{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+@media (max-width: 768px) {
+
+  .PageReact .BtnWrap{display: block;}
+  .PageReact ul li{width: 100%; display: block;}
+  .PageReact ul li a{margin: 1rem auto 1rem;}
+  .PageReact ul li a:nth-child(1){margin: 1rem;}
+  .Dual{flex-direction: column;}
+  .Dual .DualInner{display: block;}
+  .Dual .DualInner>div{width: 100%; height: 50vh;}
+}
+
+/* 스타일 (CSS) */
+ .heart-container {z-index: 2;
+  display: flex;position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 화면 높이를 100%로 설정하여 화면에 맞게 배치 */
+  width: 100%;  /* 화면 너비를 100%로 설정 */
+  overflow: hidden; /* SVG가 넘칠 경우 숨김 처리 */
+}
+
+.heart-svg {
+  width: 100%;  /* 부모 요소의 크기에 맞게 SVG 크기 조정 */
+  height: 100%; /* 부모 요소의 크기에 맞게 SVG 크기 조정 */
+}
+
+.heart-path {
+  animation: drawHeart 3s ease forwards; /* 3초 동안 하트 그려지기 애니메이션 */
+}
+
+@keyframes drawHeart {
+  0% {
+    stroke-dashoffset: 200; /* 경로의 끝에서 시작 */
+  }
+  100% {
+    stroke-dashoffset: 0;   /* 경로의 끝까지 그려지며 끝 */
+  }
+}

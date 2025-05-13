@@ -1,0 +1,186 @@
+.Header {
+position: fixed;
+
+height: 6rem;  width: 100%; z-index: 9;
+padding: 0 3rem;
+}
+.Header .MenuOpen{
+    display: block; position: relative;
+    width: 4.5rem;
+    height: 4.5rem; cursor: pointer;
+}
+.Header .MenuOpen.active{width: 2.8rem; height: 2.8rem;}
+
+.MenuOpen::before{    background: #000;
+  content: ""; transition: all .3s;
+  display: block; 
+  height: 0.2rem; width: 100%;
+  margin: 1rem 0;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px #fff;
+}
+
+.MenuOpen::after{    background: #000;
+  content: "";
+  display: block; width: 100%;
+  height: 2px; transition: all .3s;
+  margin: 10px 0;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px #fff;
+}
+
+.Nav-icon{    width: 28px; position: relative;
+  cursor: pointer;}
+
+  .Nav-icon::before{ background-color: #000;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 10px 0;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px #fff;
+}
+.Nav-icon::after{    background-color: #000;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 10px 0;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px #fff;
+
+}
+aside{ width: 100vw; height: 100vh; overflow: hidden;}
+aside.Closed{overflow: hidden; width: 0; height: 0; position: fixed; z-index: 11;   
+  top: 0; 
+  left: -100%; cursor: pointer;
+  opacity: 0;
+  transition:opacity 0.5s ease-in-out;
+} 
+.Inner{overflow-x: hidden; overflow-y: auto; padding-top: 26vw; width: calc(100% - 6rem); margin: 0 auto;}
+.SearchBox{    position: relative;
+  width: 100%; height: 5rem;
+}
+
+aside input{width: 100%; overflow: hidden;
+  height: 5rem;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #000;
+  background: transparent;
+  outline: none;
+
+}
+aside input::placeholder{overflow: hidden;   font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #000;}
+.SearchBox .X{
+  position: absolute;
+  top: 50%;
+  right: 52px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+  background: url(/public/ic_x2.svg) no-repeat;
+}
+
+.SearchBox  button{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 28px; cursor: pointer;
+  height: 28px;
+  margin-top: -14px;
+  background: url(/public/ic_search.svg) no-repeat;
+}
+
+/* 활성화된 상태 (아이콘이 X로 변함) */
+.Nav-icon.active:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;opacity: 0;
+  top: 10px; /* 세로 위치 조정 */
+}
+.MenuOpen.active::before{  transform: rotate(-45deg);
+  position: absolute;background: #000;  box-shadow: 0 2px #fff;
+  width: 100%;
+  top: 1.5rem;  /* 세로 위치 조정 */}
+
+.Nav-icon.active:nth-child(2) {
+  opacity: 0; /* 두 번째 줄은 사라짐 */
+}
+
+.Nav-icon.active:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;opacity: 0;
+  top: 10px; /* 세로 위치 조정 */
+}
+
+.MenuOpen.active::after{  transform: rotate(45deg);
+  position: absolute;background: #000;width: 100%;
+  box-shadow: 0 2px #fff; 
+  top: 1.5rem; /* 세로 위치 조정 */}
+
+/* 사이드 메뉴 (기본 닫힌 상태) */
+aside.Closed {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* 사이드 메뉴가 열린 상태 */
+aside.Open {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+ /* 메뉴 항목 스타일 */
+ nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 1rem 0; line-height: 1;
+}
+
+nav ul li a {
+  font-size: 2rem; /* 텍스트 크기 */
+  color: #333; display: block;
+  text-align: left;
+   /* 애니메이션을 무한 반복 */
+transition: all .3s;
+}
+
+nav ul li a:hover {
+font-weight: 600;
+}
+
+
+nav ul li.no-result {
+  color: rgb(192, 192, 192);
+  font-style: italic;
+}
+
+::placeholder{font-size: 1.8rem;}
+
+.swiper-slide.swiper-slide-active.Swiper-slide>div{
+  width: 100%;  display: block;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .SearchBox{height: 3rem;margin: 0 auto 3rem;}
+  aside input{height: 3rem; }
+aside input::placeholder{font-size: 1.4rem;}
+nav ul li a{font-size: 1.6rem;}
+.SearchBox .X{display: none;}
+.SearchBox button{width: 2rem; height: 2rem;}
+}
