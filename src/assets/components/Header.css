@@ -1,7 +1,7 @@
 .Header {
 position: fixed;
 
-height: 6rem;  width: 100%; z-index: 9;
+height: 6rem;  width: 100%; z-index: 90;
 padding: 0 3rem;
 }
 .Header .MenuOpen{
@@ -57,30 +57,36 @@ padding: 0 3rem;
   box-shadow: 0 2px #fff;
 
 }
-aside{ width: 100vw; height: 100vh; overflow: hidden;}
+aside{ width: 100%; height: 100%;   overflow: hidden;
+ position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 29; background:#f7f7f7;}
+/* 사이드 메뉴가 열린 상태 */
+aside.Open {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
 aside.Closed{overflow: hidden; width: 0; height: 0; position: fixed; z-index: 11;   
   top: 0; 
   left: -100%; cursor: pointer;
   opacity: 0;
   transition:opacity 0.5s ease-in-out;
 } 
-.Inner{overflow-x: hidden; overflow-y: auto; padding-top: 10vw; width: calc(100% - 6rem); margin: 0 auto;}
-.SearchBox{    position: relative; margin: 0 auto 3rem;
+.Inner{overflow-x: hidden; overflow-y: auto; padding-top: 20vw; width: calc(100% - 6rem); margin: 0 auto;}
+.FilterBox{    position: relative; margin: 0 auto 3rem;
   width: 100%; height: 5rem; cursor: pointer; color: #000;  font-size: 1.6rem;
 }
 
-aside input{width: 100%; overflow: hidden;
+/* aside .FilterBox{width: 100%; overflow: hidden;
   height: 100%;
   border: 0;
   border-radius: 0;cursor: pointer; 
   border-bottom: 2px solid #000;
-  background: transparent; 
+  background: transparent; font-size: 1.6rem;
   outline: none;
 
-}
-aside input::placeholder{overflow: hidden;   font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+} */
+aside #category_filter{overflow: hidden;   font-size: 1.6rem;
+  font-weight: 400; border: none; outline: none;
+  letter-spacing: 0.05em; width: 100%; padding: 1rem 2rem;
   color: #000;}
 .SearchBox .X{
   position: absolute;
@@ -89,16 +95,16 @@ aside input::placeholder{overflow: hidden;   font-size: 1.6rem;
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background: url(/public/ic_x2.svg) no-repeat;
+  background: url(/public/ic_x2.svg)no-repeat center/contain;
 }
 
 .SearchBox  button{
   position: absolute;
   top: 50%;
   right: 0;transform: translateY(-50%);
-  width: 28px; cursor: pointer;
+  width: 28px; cursor: pointer; z-index: 30;
   height: 28px;
-  background: url(/public/ic_search.svg) no-repeat;
+  background: url(/public/ic_search.svg)no-repeat center/contain;
 }
 
 /* 활성화된 상태 (아이콘이 X로 변함) */
@@ -133,11 +139,7 @@ aside.Closed {
   transition: transform 0.3s ease;
 }
 
-/* 사이드 메뉴가 열린 상태 */
-aside.Open {
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-}
+
 nav{margin: 3rem auto 0;}
  /* 메뉴 항목 스타일 */
  nav ul {
@@ -169,9 +171,9 @@ nav ul li.no-result {
 
 ::placeholder{font-size: 1.8rem;}
 
-.swiper-slide.swiper-slide-active.Swiper-slide>div{
+.swiper-slide.swiper-slide-active>div{
   width: 100%;  display: block;
-  height: 100%;
+  height: 100%; overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -181,4 +183,5 @@ aside input::placeholder{font-size: 1.4rem;}
 nav ul li a{font-size: 1.6rem;}
 .SearchBox .X{display: none;}
 .SearchBox button{width: 2rem; height: 2rem;}
+.Header .MenuOpen{width: 3rem; height: 3rem; }
 }
