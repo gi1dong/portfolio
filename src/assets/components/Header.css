@@ -144,7 +144,7 @@ nav{margin: 3rem auto 0;}
  /* 메뉴 항목 스타일 */
  nav ul {
   list-style: none;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 nav ul li {
