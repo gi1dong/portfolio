@@ -162,6 +162,32 @@ const Home=()=> {
       }
     }
   };
+
+  useEffect(() => {
+  // 기존 비디오 자동 재생
+  if (videoRef.current[0]) {
+    videoRef.current[0].play().catch((error) => {
+      console.error("Error playing video: ", error);
+    });
+  }
+  if (videoRef02.current[0]) {
+    videoRef02.current[0].play().catch((error) => {
+      console.error("Error playing video: ", error);
+    });
+  }
+
+  // 🚫 전체화면 자동 진입 차단
+  const handleFullscreenChange = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
+  };
+  document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+  return () => {
+    document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  };
+}, []);
   return (
     <div>
       <Header/>
@@ -208,7 +234,6 @@ const Home=()=> {
       return null; // 기본값 처리 (불필요한 경우 생략 가능)
   }
 })}
-
       </Swiper>
     </div>
   );

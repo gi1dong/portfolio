@@ -38,7 +38,6 @@ body {
 .Swiper-slide img,.Swiper-slide video{display: block; width: 100%!important; height: 100%!important; overflow: hidden;}
 .Main{position: relative; width: 100%; height: 100vh;}
 .Swiper-slide>div::before,.MainBox::before, .Dual::before,.VideoSlide:before{content: ""; background: rgb(0 0 0 / 50%); display: block; position: fixed;  width: 100%; height: 100%;  background-position: center; z-index: 1;}
-
 .swiper-slide.swiper-slide-active.Swiper-slide{opacity: 1;}
 .swiper-slide.swiper-slide-active{overflow: hidden; width: 100%; height: 100%;}
 .Aesop{opacity: 1; width: 100%; height: 100%; object-fit: cover; background: url(/src/assets/aesop.mp4)no-repeat center /cover; position: absolute; top: 0; right: 0; z-index: 9;}
@@ -51,8 +50,15 @@ body {
 
 a{text-decoration: none;}
 .SwiperBox{width: 100%; height: 100vh; margin:0 auto ;}
-
+nav ul li a{padding:0 1rem;}
 /* .MainBox{position: relative;} */
+aside.Open select{ transition: all .3s;}
+aside.Open option{font-size: 1.6rem;
+  color: #333; padding: 1rem 0;
+  display: block;font-family: 'Apple SD Gothic Neo';
+  text-align: left;
+
+}
  .MainBox{width: 100vw; height: 100vh; position: relative; overflow: hidden; margin: 0 auto;} 
  .VideoSlide{width: 100vw; height: 100vh; position: absolute; overflow: hidden; margin: 0 auto;} 
 
@@ -62,7 +68,6 @@ a{text-decoration: none;}
 .MainTxt p{font-size: 1.8rem; margin: 3rem auto 3rem;}
 .swiper-pagination-bullet{background: rgba(0, 0, 0, 0.5);}
 .swiper-pagination-bullet-active{background: #eee;}
-
 .swiper-wrapper, .Swiper,.swiper-backface-hidden .swiper-slide, .swiper-slide,.swiper-slide>div{width: 100%; height: 100vh!important;}
 
 .PageReact .Btn.left,.PageReact .Btn,.Btn01{
